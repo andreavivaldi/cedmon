@@ -1,0 +1,11 @@
+[Unit]
+Description=CEDMon Rest Server
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/node /path/to/cedmon/server.js
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

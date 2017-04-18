@@ -1,0 +1,22 @@
+{
+  "app": {
+    "server": {
+      "host": "0.0.0.0",
+      "port": 3000,
+      "name": "CEDMon",
+      "publicUrl": "raspone.tools.nic.it"
+    },
+    "dhtSensor": {
+      "type": 22,
+      "dataWire": 4
+    },
+    "mongo": {
+      "host": "127.0.0.1",
+      "port": 27017,
+      "dbName": "tlog"
+    },
+    "system": {
+      "logLevel": "debug"
+    }
+  }
+}
