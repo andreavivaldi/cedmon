@@ -1,7 +1,7 @@
 {
   "name": "cedmon",
   "version": "1.0.0",
-  "description": "CED environment monitoring interface",
+  "description": "DC environment monitoring interface",
   "main": "server.js",
   "dependencies": {
     "config": "^1.25.1",
