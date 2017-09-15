@@ -58,7 +58,7 @@ function getChartData(interval) {
 				  }
 			  ]
 		  }
-		
+
       mydata.forEach(function(obj) {
         dateObj = new Date(obj.date);
         if(interval > 24 )chartData.labels.push(dateObj.toLocaleDateString() + " " + dateObj.toLocaleTimeString().slice(0,-3));
@@ -70,6 +70,7 @@ function getChartData(interval) {
     }
   });
   var chartDiv = document.getElementById('chart-' + interval + '').getContext("2d");
+  chartDiv.height(500);
   var barChart = new Chart(chartDiv, {
     type: 'line',
     data: chartData,

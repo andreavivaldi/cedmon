@@ -1,9 +1,10 @@
 {
   "name": "cedmon",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "DC environment monitoring interface",
   "main": "server.js",
   "dependencies": {
+    "commander": "^2.11.0",
     "config": "^1.25.1",
     "cron": "^1.2.1",
     "log": "^1.4.0",
