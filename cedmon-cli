@@ -1,0 +1,24 @@
+#!/usr/bin/env node
+
+var program = require('commander');
+var sensor = require('node-dht-sensor');
+
+process.env.NODE_CONFIG_DIR = __dirname +  '/config';
+var config = require('config');
+var dhtSensorType = config.get('app.dhtSensor.type');
+var dhtSensorDataWire = config.get('app.dhtSensor.dataWire');
+
+program
+  .version('1.0.1')
+  .option('-t, --temperature', 'Get current temperature value')
+  .option('-h, --humidity', 'Get current humidity value')
+  .parse(process.argv);
+
+sensor.read(dhtSensorType, dhtSensorDataWire, function(err, temperature, humidity) {
+  if (!err) {
+    temp = temperature.toFixed(1);
+    humidity = humidity.toFixed(1);
+    if (program.temperature) console.log('Temperature: ' + temp);
+    if (program.humidity) console.log('Humidity: ' + humidity);
+  }
+});
