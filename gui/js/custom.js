@@ -70,7 +70,7 @@ function getChartData(interval) {
     }
   });
   var chartDiv = document.getElementById('chart-' + interval + '').getContext("2d");
-  chartDiv.height(500);
+
   var barChart = new Chart(chartDiv, {
     type: 'line',
     data: chartData,
